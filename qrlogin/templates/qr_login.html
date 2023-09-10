@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Login</title>
+</head>
+<body>
+    <h1>QR Login</h1>
+    <form action="{% url 'qr_login_callback' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
